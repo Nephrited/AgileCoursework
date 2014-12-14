@@ -1,0 +1,13 @@
+<table>
+	<th>Event:</th>
+	<th>Date:</th>
+<% @events.each do |event| %>
+	<% if event.date >= Date.today %>
+	<tr>
+		<td><%= event.title%></td>
+		<td><%= event.date%></td>
+	</tr>
+	<% end %>
+
+<% end %>
+</table>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title %></title>
+
+	<%= csrf_meta_tags %>
+</head>
+<body>
+<%=render 'layouts/header' %>
+<%=render 'layouts/navigation' %>
+
+<section>
+<%= yield %>
+</section>
+</body>
+</html>
