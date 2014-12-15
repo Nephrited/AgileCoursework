@@ -1,16 +1,15 @@
 <table>
-<tr>
-	<td>Sunday</td>
-	<td>Monday</td>
-	<td>Tuesday</td>
-	<td>Wednesday</td>
-	<td>Thursday</td>
-</tr>
-<tr>
-	<td>Friday</td>
-	<td>Saturday</td>
-	<td>Sunday</td>
-	<td>Monday</td>
-	<td>Tuesday</td>
-</tr>
+<% @bookings.each do |book| %>
+<%if @datelast !=book.date%>
+	<th colspan="2"><%=book.date.strftime("%-d/%-m")%></th>
+	<tr>	
+<%end%>
+	<td class="lawn <%if book.booked == true%>booked<%else%>unbooked<%end%>">
+	<%= button_to ""+book.field+"", bookit_path(id: book.id)	%>
+	</td>
+<%if @datelast==book.date%>
+	</tr>	
+<%end%>
+<% @datelast = book.date %>
+<% end %>
 </table>

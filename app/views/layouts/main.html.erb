@@ -3,15 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title><%= title %></title>
-
+	<%= stylesheet_link_tag "main", :media => "all" %>
 	<%= csrf_meta_tags %>
 </head>
 <body>
+<div id="container">
 <%=render 'layouts/header' %>
 <%=render 'layouts/navigation' %>
 
 <section>
 <%= yield %>
 </section>
+</div>
 </body>
 </html>

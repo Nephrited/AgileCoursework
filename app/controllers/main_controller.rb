@@ -29,8 +29,16 @@ class MainController < ApplicationController
   end
   def book
   	@title = "Book a Lawn"
+    @bookings = Bookings.order('id ASC')
   end
   def download
     send_file './public/'+params[:file], :type=>"application/pdf" 
+  end
+
+  def bookit
+    booking = Bookings.find(params[:id])
+    booking.booked = true
+    booking.save
+    redirect_to action: 'book'
   end
 end

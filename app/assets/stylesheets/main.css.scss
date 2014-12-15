@@ -1,3 +1,58 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    background-color: white;
+}
+
+h1 {
+	display: inline;
+	padding-left: 50px;
+	vertical-align: middle;
+}
+
+nav {
+	width: 200px;
+	float: left;
+}
+
+section {
+	width: 600px;
+	margin-left: 100px;
+	display: inline-block;
+}
+
+#container {
+	width: 900px;
+	position: relative;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+nav:a {
+	display: block;
+	background-color: #AEEDFF;
+}
+
+table {
+	margin-top: 50px;
+    border-style: solid;
+    border-width: 5px;
+}
+
+th {
+	padding:10px;
+}
+
+td {
+	padding:10px;
+}
+
+.unbooked {
+	background-color: #9EFF91;
+}
+
+.booked {
+	background-color: #FF8C8C;
+}
