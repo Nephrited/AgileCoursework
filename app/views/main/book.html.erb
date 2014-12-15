@@ -4,7 +4,7 @@
 	<th colspan="2"><%=book.date.strftime("%-d/%-m")%></th>
 	<tr>	
 <%end%>
-	<td class="lawn <%if book.booked == true%>booked<%else%>unbooked<%end%>">
+	<td id="<%=book.id%>" class="lawn <%if book.booked == true%>booked<%else%>unbooked<%end%>">
 	<%= button_to ""+book.field+"", bookit_path(id: book.id)	%>
 	</td>
 <%if @datelast==book.date%>
@@ -13,3 +13,4 @@
 <% @datelast = book.date %>
 <% end %>
 </table>
+<span id="temperature"></span>

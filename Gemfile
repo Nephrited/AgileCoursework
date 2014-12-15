@@ -41,3 +41,4 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'carrierwave'
+gem 'puma'

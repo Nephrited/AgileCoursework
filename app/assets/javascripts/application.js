@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+	setTimeout(function() {
+		var source = new EventSource('/bookings');
+		source.addEventListener('update',function(e) {
+			var obj = JSON.parse(e.data);
+			console.log(obj);
+			if(obj.booked == true) {
+				$('#'+obj.id).addClass('booked').removeClass('unbooked');
+			}
+		});
+	},1);
+});
