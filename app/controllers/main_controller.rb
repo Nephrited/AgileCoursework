@@ -1,4 +1,6 @@
 class MainController < ApplicationController
+  include ActionController::Live
+
   def index
   	@title = "Home"
   end

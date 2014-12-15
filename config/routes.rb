@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   match "/location" => "main#location", via: :get
   match "/book" => "main#book", via: :get
   match "/links" => "main#links", via: :get
+  match "/download" => "main#download", via: :get
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
