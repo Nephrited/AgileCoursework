@@ -1,0 +1,16 @@
+
+
+<table>
+<% @newsletters.each do |letter| %>
+	<%if @datelast !=letter.date.strftime("%Y")%>
+		<th colspan="2"><%=letter.date.strftime("%Y")%></th>
+	<%end%>
+	<tr>
+		<td><a href="download?file=<%=letter.file%>"><%=letter.title%></a></td>
+		<td><%= letter.date%></td>
+	</tr>
+	<%
+	@datelast = letter.date.strftime("%Y") 
+end
+%>
+</table>

@@ -13,10 +13,11 @@ class MainController < ApplicationController
   end
   def programme
   	@title = Time.now.strftime("%Y")+" Programme"
-  	@events = Events.all
+  	@events = Events.order('date ASC').all
   end
   def newsletters
   	@title = "Newsletters"
+    @newsletters = Newsletters.order('date ASC').all
   end
   def matters
   	@title = "Club Matters"
@@ -26,5 +27,8 @@ class MainController < ApplicationController
   end
   def book
   	@title = "Book a Lawn"
+  end
+  def download
+    send_file './public/'+params[:file], :type=>"application/pdf" 
   end
 end
