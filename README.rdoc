@@ -1,5 +1,7 @@
 == README
 
-A simple website built in Ruby using the Rails framework for the sake of a university assignment.
+A simple website built in Ruby using the Rails framework for the sake of a university assignment many years ago.
 
 It does not feature fantastic code.
+
+It remains uploaded for the sake of posterity.
